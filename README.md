@@ -8,11 +8,13 @@ Para que funcione la aplicación.
 
 3 Necesitas instalar unas cuantas cosas:
 
-Bootstrap, JQUERY, Popper  -->  npm install bootstrap jquery @popperjs/core
-SweetAlert2 -->  npm install sweetalert2
-Animate.css -->  npm install animate.css --save
+4 Bootstrap, JQUERY, Popper  -->  npm install bootstrap jquery @popperjs/core
 
-4 Arranca la aplicación con npm serve -o y debería funcionar.
+5 SweetAlert2 -->  npm install sweetalert2
+
+6 Animate.css -->  npm install animate.css --save
+
+7 Arranca la aplicación con npm serve -o y debería funcionar.
 
 
 Un saludo.
