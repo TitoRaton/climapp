@@ -1,0 +1,51 @@
+<div id="cabeceraLogin" class="container">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <div class="col-md-3 mb-2 mb-md-0">
+        <h1 class="animate__animated animate__headShake animate__infinite">Clima App</h1>
+      </div>
+      <div class="col-md-3 text-end">
+        <button type="button" (click)="isLoginView=true;isRegistrationView=false" class="btn btn-outline-secondary me-2">Entrar</button>
+        <button type="button" (click)="isRegistrationView=true;isLoginView=false" class="btn btn-outline-secondary">Registrarse</button>
+      </div>
+    </header>
+</div>
+<div id="formularioLogin" class="container">
+    
+    <main class="form-signin w-100 m-auto">
+        @if (isRegistrationView) {
+            <form>
+                <h3 class="h3 mb-3 fw-normal">Hazte Socio</h3>
+            
+                <div class="form-floating">
+                  <input name="userName" [(ngModel)]="usuarioRegistroObj.userName" type="email" class="form-control" id="floatingInput" placeholder="saturnino34">
+                  <label for="floatingInput">Nombre Usuario</label>
+                </div>
+                <div class="form-floating">
+                  <input name="userEmail" [(ngModel)]="usuarioRegistroObj.userEmail" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">Email Contacto</label>
+                </div>
+                <div class="form-floating">
+                  <input name="password" [(ngModel)]="usuarioRegistroObj.password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                  <label for="floatingPassword">Contraseña</label>
+                </div>
+                <button class="btn btn-outline-secondary w-100 py-2" (click)="onRegister()">Registrarse</button>
+              </form>
+        }
+        @if (isLoginView) {
+            <form>
+                <h3 class="h3 mb-3 fw-normal">Loguéate</h3>
+            
+                <div class="form-floating">
+                  <input name="userName" [(ngModel)]="usuarioLoginObj.userName" type="email" class="form-control" id="floatingInput" placeholder="saturnino34">
+                  <label for="floatingInput">Nombre Usuario</label>
+                </div>
+                <div class="form-floating">
+                  <input name="password" [(ngModel)]="usuarioLoginObj.password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                  <label for="floatingPassword">Contraseña</label>
+                </div>
+                <button class="btn btn-outline-secondary w-100 py-2" (click)="onLogin()">Entrar</button>
+              </form>
+        }
+        
+      </main>
+</div>
