@@ -16,7 +16,7 @@ providedIn: 'root'
 })
 
 export class OpenweathermapComponent {
-  private apiKey = '6f2960c250d3457672cb78b081457a76';
+  private apiKey = 'APIKey';
   private apiUrl = `https://api.openweathermap.org/data/2.5/weather`;
   
   constructor(private http: HttpClient) { }
